@@ -17,6 +17,8 @@ func main() {
 	e.HideBanner = true
 	e.HidePort = true
 
+	e.File("/", "./web/index.html")
+	
 	util.LogSuccess("server is now online")
 	e.Logger.Fatal(e.Start(":6969"))
 }
