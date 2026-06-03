@@ -14,7 +14,7 @@ func Init(sqliteFile string) error {
 	if err != nil { LogError(err); return err }
 
 	// create tables
-	_, err = DB.Exec("CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY, name TEXT, password TEXT, config TEXT")
+	_, err = DB.Exec("CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY, name TEXT, password TEXT, config TEXT)")
 	if err != nil { LogError(err); return err}
 
 	LogInfo("database initialised")
